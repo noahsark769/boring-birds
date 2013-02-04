@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boring Birds</title>
+
+	<script type="text/javascript" src='http://code.jquery.com/jquery-1.9.0.js'></script>
+	<script type="text/javascript" src='birds.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			window.bucket = new Bucket($('.bucket'), $('.stage'));
+			window.turn = 0;
+			var colors = ['yellow', 'red', 'black'];
+			for (var i=0; i<10; i++) {
+				var color = colors[Math.floor(Math.random() * colors.length)];
+				var b = new Bird(color);
+				window.bucket.add(b);
+			}
+		});
+	</script>
+
+	<link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' type='text/css' href='reset.css'>
+	<link rel='stylesheet' type='text/css' href='birds.css'>
+</head>
+<body>
+	<div class="title">Boring Birds</div>
+	<div class="rules">
+		<h1>Rules</h1>
+		<h2>On your turn you may:</h2>
+		<ol>
+			<li>Remove a black bird (by clicking on it)</li>
+			<li>Remove two red birds and add up to 7 black birds</li>
+			<li>Remove one yellow bird and add up to 3 red birds</li>
+		</ol>
+		<h2>You win when your opponent has no more moves</h2>
+	</div>
+	<div class="players">
+		<p class='player active'>Player 1</p>
+		<p class='player'>Player 2</p>
+	</div>
+	<div class="stage">
+
+	</div>
+	<div class="bucket">
+
+	</div>
+</body>
+</html>

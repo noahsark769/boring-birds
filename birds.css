@@ -1,0 +1,161 @@
+html {
+	background-color: #507080;
+	font-family: "Squada One";
+	text-transform: uppercase;
+	color: #B9BBBD;
+}
+
+h1 {
+	font-size: 2em;
+	margin-bottom:
+	20px;
+}
+
+h2 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ol > li {
+	margin-bottom: 5px;
+}
+
+.rules {
+
+	display: block;
+	width: 300px;
+
+	position: absolute;
+	top: 30px;
+	left: 50px;
+	z-index: -1;
+	opacity: .7;
+}
+
+.title {
+	font-size: 4em;
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 50px;
+	opacity: .7;
+}
+
+.players {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 5px;	
+
+	font-size: 2em;
+}
+
+.players > p:not(.active) {
+	color: black;
+}
+
+.players > p:after {
+	content: ': Wait!';
+}
+
+.players > p.active:after {
+	content: ': Your turn!';
+}
+
+
+
+.bucket {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 100px;
+	border: 2px solid black;
+	padding: 5px;
+
+	position: relative;
+	color: black;
+}
+
+.bucket:before {
+	content: "Bucket:";
+	display: block;
+	width: 20px;
+	line-height: 20px;
+	font-size: 18px;
+
+	position: absolute;
+	top: -20px;
+	left: 5px;
+}
+
+.bird {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+
+	border: 2px solid white;
+
+	display: inline-block;
+	margin-right: 3px;
+
+	width: 30px;
+	height: 30px;
+}
+
+.bird.yellow {
+	background-color: yellow;
+}
+
+.bird.red {
+	background-color: red;
+}
+
+.bird.red.selected {
+	border-color: black;
+}
+
+.bird.black {
+	background-color: black;
+}
+
+.stage {
+	display: none;
+	width: 300px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	padding: 5px;
+
+	border: 2px solid black;
+	margin-top: 100px;
+
+	position: relative;
+}
+
+.stage:before {
+	content: "Add your birds:";
+	display: block;
+	width: 200px;
+	line-height: 20px;
+	font-size: 18px;
+
+	color: black;
+
+	position: absolute;
+	top: -20px;
+	left: 5px;
+}
+
+.done {
+	display: inline;
+	cursor: pointer;
+}
+
+.done:hover {
+	color: black;
+}
