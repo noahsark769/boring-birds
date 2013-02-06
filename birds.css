@@ -59,11 +59,11 @@ ol > li {
 	color: black;
 }
 
-.players > p:after {
+.players > p.player:after {
 	content: ': Wait!';
 }
 
-.players > p.active:after {
+.players > p.player.active:after {
 	content: ': Your turn!';
 }
 
